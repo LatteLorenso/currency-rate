@@ -2,9 +2,15 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  padding: 15px 40px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .header .header__title {
+  font-size: 18px;
   font-weight: 700;
   text-align: left;
   margin-right: 15px;
@@ -14,22 +20,56 @@
   align-items: center;
   gap: 30px;
   text-align: right;
+  font-size: 14px;
+  font-weight: 400;
 }
 .header a:link {
   color: black;
   text-decoration: none;
   transition: 0.1s ease;
 }
+.header a:visited {
+  color: black;
+  text-decoration: none;
+}
 .header a:hover {
   color: #0077ff;
   text-decoration: none;
 }
+.header .button-circle {
+  text-align: center;
+  line-height: 50px;
+  background: #EAEDF1;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.header .button-circle .themeToggle {
+  width: 20px;
+  height: 20px;
+  stroke: black;
+  stroke-width: 1.7;
+  fill: none;
+}
+.header .button-circle .themeToggle:hover {
+  stroke: #0077ff;
+  transition: 0.1s ease;
+}
 
 body {
   background-color: #F8FAFC;
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 0px;
+  margin: auto;
   font-family: "Inter", serif;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d8d8d8;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
