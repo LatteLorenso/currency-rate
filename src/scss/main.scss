@@ -4,9 +4,16 @@
 
 body {
     background-color: $bg-light;
-    margin: 0;
-    padding: 0;
+    margin: 20px;
+    padding: 0px;
+    margin: auto;
     font-family: 'Inter', serif;
+}
+
+hr {
+    border: none;
+    border-top: $hr-border-top;
+    width: 100%;
 }
 
 
