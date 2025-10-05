@@ -70,3 +70,71 @@
 }
 
 }
+
+.main {
+    font-family: 'Inter', serif;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    white-space: wrap;
+    padding: 15px 40px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    .main__title {
+        font-size: $h2-normal;
+        font-weight: 700;
+        text-align: left;
+        margin-right: 15px;
+    }
+
+    .form-style {
+
+        .search-input {
+            font-family: 'Inter', serif;
+            border: none;
+            border-radius: $b-radius;
+            padding: 5px 60px;
+            text-align: left;
+            font-size: 16px;
+            color: #0E141B;
+            font-weight: 500;
+            width: 100%;
+            margin-top: 4px;
+            background-color: #E7EDF3;
+            padding-left: 47px; // отступ под иконку
+            height: 40px;
+            outline: none;
+
+            &:active {
+                border: none;
+                border: #E7EDF3;
+            }
+
+            &::placeholder {
+                color: #4E7097;
+                margin-right: 55px;
+            }
+
+
+        }
+    }
+
+    .search-box {
+        border: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    .search-icon {
+        position: absolute;
+        left: 15px;
+        bottom: 14px;
+        width: 24px;
+        height: 24px;
+        fill: #4E7097;
+    }
+
+}
