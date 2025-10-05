@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header__title {
+  font-weight: 700;
+  text-align: left;
+  margin-right: 15px;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: right;
+}
+.header a:link {
+  color: black;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+.header a:hover {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+}
+
+/*# sourceMappingURL=main.css.map */

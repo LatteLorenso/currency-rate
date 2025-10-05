@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .header__title {
+        font-weight: 700;
+        text-align: left;
+        margin-right: 15px;
+}
+
+    .nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: right;
+
+}
+
+    a:link {
+        color: black;
+        text-decoration: none;
+        transition: 0.1s ease;
+    }
+
+    a:hover {
+        color: #0077ff;
+        text-decoration: none;
+    }
+
+}
+

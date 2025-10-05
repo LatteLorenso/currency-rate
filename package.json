@@ -1,0 +1,25 @@
+{
+  "name": "currency-rate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/app.js",
+  "scripts": {
+    "sass": "sass src/scss/main.scss dist/css/main.css",
+    "sass:watch": "sass --watch src/scss/main.scss dist/css/main.css",
+    "postcss": "postcss dist/css/main.css -o dist/css/main.min.css",
+    "build": "npm run sass && npm run postcss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
+    "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1"
+  }
+}
