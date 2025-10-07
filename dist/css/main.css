@@ -128,4 +128,43 @@ hr {
   width: 100%;
 }
 
+.container {
+  display: flex;
+  margin-top: 25px;
+  padding: 0;
+  gap: 15px;
+}
+.container .btn-rate {
+  background-color: #E7EDF3;
+  width: 70px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .btn-rate:hover {
+  background-color: #D0DBE7;
+  transition: 0.2s ease;
+}
+
+.container-rate {
+  display: block;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #F8FAFC;
+  border: 2px solid #E7EDF3;
+  border-radius: 20px;
+}
+.container-rate .text-rate {
+  padding-left: 17px;
+  font-family: "Inter", serif;
+}
+.container-rate .number-rate {
+  padding-left: 17px;
+  margin-top: -5px;
+  font-weight: 800;
+}
+
 /*# sourceMappingURL=main.css.map */
