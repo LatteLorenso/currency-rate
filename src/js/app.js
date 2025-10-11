@@ -9,13 +9,13 @@ async function fetchRate(base = "USD", target = "RUB") {
   // если одна из валют — рубль
   if (base === "RUB") {
     // курс RUB → любая
-    rate = 1 / rates[target].Value;
+    rate = 1 / (rates[target].Value / rates[target].Nominal);
   } else if (target === "RUB") {
     // курс любая → RUB
-    rate = rates[base].Value;
+    rate = rates[base].Value / rates[base].Nominal;
   } else {
     // курс любая → любая (через рубль)
-    rate = rates[base].Value / rates[target].Value;
+    rate = (rates[base].Value / rates[base].Nominal) / (rates[target].Value / rates[target].Nominal);
   }
 
   // 💬 Показываем курс на странице
@@ -25,7 +25,7 @@ async function fetchRate(base = "USD", target = "RUB") {
   document.getElementById("update-time").textContent = new Date().toLocaleTimeString();
   document.getElementById("next-time").textContent = "00:10";
 
-  // 🔁 Обновляем надпись "USD:RUB" / "KZT:RUB"
+  // 🔁 Обновляем надпись "USD:RUB" / "UAH:RUB"
   document.getElementById("currency-name").textContent = `${base}:${target}`;
 
   return rate;
@@ -33,9 +33,9 @@ async function fetchRate(base = "USD", target = "RUB") {
 
 // === Настройки графика ===
 let chart;
-let currentCurrency = "USD";
+let currentBase = "USD";
+let currentTarget = "RUB";
 
-// функция для рисования графика
 async function drawChart(base = "USD", target = "RUB") {
   const ctx = document.getElementById("currencyChart").getContext("2d");
 
@@ -93,27 +93,27 @@ function setActiveButton(id) {
 
 // === Слушатели кнопок ===
 document.getElementById("btn-usd").addEventListener("click", () => {
-  currentCurrency = "USD";
+  currentBase = "USD"; currentTarget = "RUB";
   setActiveButton("btn-usd");
-  drawChart("USD", "RUB");
+  drawChart(currentBase, currentTarget);
 });
 
 document.getElementById("btn-rub").addEventListener("click", () => {
-  currentCurrency = "RUB";
+  currentBase = "RUB"; currentTarget = "EUR";
   setActiveButton("btn-rub");
-  drawChart("RUB", "EUR");
+  drawChart(currentBase, currentTarget);
 });
 
 document.getElementById("btn-kzt").addEventListener("click", () => {
-  currentCurrency = "KZT";
+  currentBase = "KZT"; currentTarget = "RUB";
   setActiveButton("btn-kzt");
-  drawChart("KZT", "RUB");
+  drawChart(currentBase, currentTarget);
 });
 
 document.getElementById("btn-uah").addEventListener("click", () => {
-  currentCurrency = "UAH";
+  currentBase = "UAH"; currentTarget = "RUB";
   setActiveButton("btn-uah");
-  drawChart("UAH", "RUB");
+  drawChart(currentBase, currentTarget);
 });
 
 // === При загрузке страницы ===
@@ -124,6 +124,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // === Автообновление каждые 5 минут ===
 setInterval(async () => {
-  await drawChart(currentCurrency === "RUB" ? "RUB" : currentCurrency, "RUB");
+  await drawChart(currentBase, currentTarget);
   console.log("График обновлён:", new Date().toLocaleTimeString());
 }, 300000);
