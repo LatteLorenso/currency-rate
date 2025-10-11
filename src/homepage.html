@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Rate</title>
     <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="/dist/images/favicon-32x32.png" rel="icon" sizes="32x32">
 </head>
 <body>
 
@@ -49,14 +50,18 @@
         <button class="btn-rate" id="btn-uah">UAH</button>
     </section>
     <section class="container-rate">
-        <p class="text-rate">Динамика курса</p>
-        <h1 class="number-rate">83.12</h1>
+        <h3 class="text-rate">Динамика курса <span id="currency-name">USD:RUB</span></h3>
+        <h1 class="rate number-rate">--.--</h1>
+      <div class="card">
+        <canvas id="currencyChart"></canvas>
+      </div>
     </section>
-    <section class>
-        <!-- ⬇️ График здесь!! ⬇️ -->
-    </section>
-</main>
+    <p class="update-info">
+        Обновлено: <span id="update-time">--:-- </span> | Следующее обновление: <span id="next-time">--:--</span>
+    </p>
+    </main>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/app.js" type="module"></script>
 <!-- <script src="js/nmode.js" type="module"></script> -->
 </body>

@@ -37,10 +37,17 @@ hr {
             transition: 0.2s ease;
         }
     }
+
+    .btn-rate.active {
+    background-color: #1978E5;
+    color: white;
+    transition: 0.2 ease;
+}
 }
 
 .container-rate {
     display: block;
+    max-height: 500px;
     margin-top: 40px;
     padding: 10px;
     background-color: $bg-light;
@@ -50,12 +57,43 @@ hr {
     .text-rate {
         padding-left: 17px;
         font-family: 'Inter', serif;
-        
+        font-size: 1rem;
+        font-weight: 500;
     }
 
     .number-rate {
         padding-left: 17px;
         margin-top: -5px;
-        font-weight: 800;
+        font-size: 32px;
+        font-weight: 700;
     }
+}
+
+// #currency-section {
+//   max-width: 800px;
+//   margin: 40px auto;
+//   padding: 20px;
+//   background: #fff;
+//   border-radius: 12px;
+//   box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+// }
+
+#currency-section p {
+  text-align: center;
+  color: #4e7097;
+  margin-bottom: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 950px;
+}
+
+.update-info {
+    display: block;
+    margin-top: 35px;
+    color: #4E7097;
+    font-size: 14px;
 }
