@@ -9,13 +9,13 @@ async function fetchRate(base = "USD", target = "RUB") {
   // если одна из валют — рубль
   if (base === "RUB") {
     // курс RUB → любая
-    rate = 1 / (rates[target].Value / rates[target].Nominal);
+    rate = 1 / rates[target].Value;
   } else if (target === "RUB") {
     // курс любая → RUB
-    rate = rates[base].Value / rates[base].Nominal;
+    rate = rates[base].Value;
   } else {
     // курс любая → любая (через рубль)
-    rate = (rates[base].Value / rates[base].Nominal) / (rates[target].Value / rates[target].Nominal);
+    rate = rates[base].Value / rates[target].Value;
   }
 
   // 💬 Показываем курс на странице
@@ -25,7 +25,7 @@ async function fetchRate(base = "USD", target = "RUB") {
   document.getElementById("update-time").textContent = new Date().toLocaleTimeString();
   document.getElementById("next-time").textContent = "00:10";
 
-  // 🔁 Обновляем надпись "USD:RUB" / "UAH:RUB"
+  // 🔁 Обновляем надпись "USD:RUB" / "RUB:EUR"
   document.getElementById("currency-name").textContent = `${base}:${target}`;
 
   return rate;
@@ -33,12 +33,13 @@ async function fetchRate(base = "USD", target = "RUB") {
 
 // === Настройки графика ===
 let chart;
-let currentBase = "USD";
-let currentTarget = "RUB";
+let currentCurrency = "USD";
 
+// функция для рисования графика
 async function drawChart(base = "USD", target = "RUB") {
   const ctx = document.getElementById("currencyChart").getContext("2d");
 
+  // примерные даты (фиктивные)
   const labels = ["12.09", "19.09", "26.09", "03.10", "11.10"];
   const rates = [82.5, 83.1, 83.4, 83.0, await fetchRate(base, target)];
 
@@ -48,6 +49,7 @@ async function drawChart(base = "USD", target = "RUB") {
     return;
   }
 
+  // создаем график
   chart = new Chart(ctx, {
     type: "line",
     data: {
@@ -93,27 +95,27 @@ function setActiveButton(id) {
 
 // === Слушатели кнопок ===
 document.getElementById("btn-usd").addEventListener("click", () => {
-  currentBase = "USD"; currentTarget = "RUB";
+  currentCurrency = "USD";
   setActiveButton("btn-usd");
-  drawChart(currentBase, currentTarget);
+  drawChart("USD", "RUB");
 });
 
 document.getElementById("btn-rub").addEventListener("click", () => {
-  currentBase = "RUB"; currentTarget = "EUR";
+  currentCurrency = "RUB";
   setActiveButton("btn-rub");
-  drawChart(currentBase, currentTarget);
+  drawChart("RUB", "EUR");
 });
 
 document.getElementById("btn-kzt").addEventListener("click", () => {
-  currentBase = "KZT"; currentTarget = "RUB";
+  currentCurrency = "KZT";
   setActiveButton("btn-kzt");
-  drawChart(currentBase, currentTarget);
+  drawChart("KZT", "RUB");
 });
 
 document.getElementById("btn-uah").addEventListener("click", () => {
-  currentBase = "UAH"; currentTarget = "RUB";
+  currentCurrency = "UAH";
   setActiveButton("btn-uah");
-  drawChart(currentBase, currentTarget);
+  drawChart("UAH", "RUB");
 });
 
 // === При загрузке страницы ===
@@ -124,6 +126,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // === Автообновление каждые 5 минут ===
 setInterval(async () => {
-  await drawChart(currentBase, currentTarget);
+  await drawChart(currentCurrency === "RUB" ? "RUB" : currentCurrency, "RUB");
   console.log("График обновлён:", new Date().toLocaleTimeString());
 }, 300000);
