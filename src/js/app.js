@@ -129,3 +129,4 @@ setInterval(async () => {
   await drawChart(currentCurrency === "RUB" ? "RUB" : currentCurrency, "RUB");
   console.log("График обновлён:", new Date().toLocaleTimeString());
 }, 300000);
+// end
