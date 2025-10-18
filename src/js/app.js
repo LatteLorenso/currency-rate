@@ -71,6 +71,14 @@ async function drawChart(base = "USD", target = "RUB") {
           }
         }
       },
+      layout: {
+        padding: {
+          top: 10,
+          bottom: 10,
+          left: 20,
+          right: 30
+        }
+      },
       interaction: { intersect: false, mode: "index" },
       scales: {
         y: { display: false, grid: { display: false } },
@@ -96,14 +104,23 @@ async function renderRateTable(base = "USD") {
     </tr>
   `;
 
-  const dateStr = new Date(data.Date).toLocaleString("ru-RU", {
-    day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit"
+  const dateStr = 
+  new Date(data.Date).toLocaleTimeString("ru-RU", { 
+    timeZone: "Europe/Moscow",
+    day: "2-digit", 
+    month: "2-digit", 
+    year: "numeric", 
+    hour: "2-digit", 
+    minute: "2-digit"
   });
 
-  const codes = Object.keys(valutes).slice(0, 14);
+  // ✅ Список только нужных валют
+  const selectedCodes = ["RUB", "EUR", "CNY", "JPY", "KRW", "SGD", "INR", "AUD", "KZT", "UAH", "GBP", "CAD", "CHF", "TRY"];
 
-  for (const code in valutes) {
-    if (code === base) continue;
+  let added = 0;
+
+  for (const code of selectedCodes) {
+    if (!valutes[code] || code === base) continue;
 
     let rate;
     if (base === "RUB") {
@@ -122,6 +139,7 @@ async function renderRateTable(base = "USD") {
       <td>${dateStr}</td>
     `;
 
+    // обработчик клика по строке
     row.addEventListener("click", () => {
       document.querySelectorAll("#rate-table tr").forEach(r => r.classList.remove("active-row"));
       row.classList.add("active-row");
@@ -130,6 +148,17 @@ async function renderRateTable(base = "USD") {
     });
 
     table.appendChild(row);
+
+    // 🛑 Стоп, если уже добавили 14 строк
+    added++;
+    if (added >= 14) break;
+
+    // === При загрузке страницы ===
+window.addEventListener("DOMContentLoaded", () => {
+  drawChart("USD", "RUB");
+  renderRateTable("USD");
+  setActiveButton("active-row");
+});
   }
 }
 

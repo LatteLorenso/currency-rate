@@ -122,7 +122,10 @@ body {
   padding: 0px;
   margin: auto;
   font-family: "Inter", serif;
-  box-sizing: border-box;
+}
+
+* {
+  box-sizing: content-box;
 }
 
 /* Линия */
@@ -214,6 +217,7 @@ table {
 th, td {
   padding: 20px 25px;
   text-align: left;
+  font-size: 14px;
 }
 
 tr {
@@ -231,7 +235,12 @@ tr:active {
   transition: 0.2 ease;
 }
 
+th {
+  font-weight: 500;
+}
+
 td {
+  color: #4E7097;
   cursor: pointer;
 }
 
