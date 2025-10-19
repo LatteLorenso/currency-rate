@@ -20,7 +20,7 @@
         <a href="#Support">Поддержать проект</a>
         <a href="#FAQ">FAQ</a>
         <a href="#Calculator">Калькулятор</a>
-        <button type="button" class="button-circle">
+        <button type="button" class="button-circle" id="themeToggle">
         <svg class="themeToggle" id="#nmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
         </svg>
@@ -31,59 +31,38 @@
 <hr>
     
 <!-- Основная секция -->
-<main class="main">
-    <div class="main__title">
-        <h1>Курсы обмена валют</h1>
+<main class="main2">
+    <div class="main__title2">
+        <h1>Как подключиться к SteamCurrency API</h1>
+    <p class="podtext">Подключение займёт всего пару минут. Следуйте этим простым шагам, чтобы получить доступ к актуальным курсам Steam.</p>
+    <h2 class="step1">Шаг 1: Получите токен доступа</h2>
+    <p class="podtext2" style="color: #4E7097; margin-top: -5px;">Чтобы начать пользоваться API, нужен токен. Чтобы его получить - необходимо приобрести подписку. 
+        Ключ для доступа будет отправлен на указанную электронную почту после завершения оплаты..</p>
+        <div class="btn-block">
+            <h3>Тарифные планы</h3>
+            <button type="button" class="btn-tariff" id="btn-300rub">30 дней - 300 руб</button>
+            <button type="button" class="btn-tariff" id="btn-800rub">90 дней - 800 руб</button>
+            <button type="button" class="btn-tariff" id="btn-1200rub">150 дней - 1200 руб</button>
+            <button type="button" class="btn-tariff" id="btn-2400rub">360 дней - 2400 руб</button>
+        </div>
+        <div class="block-submit">
+            <h3>Платежная информация</h3>
+            <div class="input-wrapper">
+            <i class="fa-solid fa-at"></i>
+            <input type="email" class="input-email" placeholder="Ваш email" id="myEmail">
+            </div>
+            <button type="submit" class="btn-submit" id="btn-email">Выберите план</button>
+        </div>
     </div>
-    <form class="form-style">
+    <!-- <h3 class="step2">Шаг 2</h3> -->
+    <!-- <form class="form-style">
         <div class="search-box">
             <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                 <path d="M229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72 72.08 72.08 0 0 1-72-72Z"/>
             </svg>
             <input type="text" placeholder="Начните вводить валюту" class="search-input">
         </div>
-    </form>
-
-    <!-- Секция График -->
-    <section class="section-buttons">
-        <button class="btn-rate" id="btn-usd">USD</button>
-        <button class="btn-rate" id="btn-rub">RUB</button>
-        <button class="btn-rate" id="btn-kzt">KZT</button>
-        <button class="btn-rate" id="btn-uah">UAH</button>
-    </section>
-    <section class="section-chart">
-        <h3 class="text-chart">Динамика курса <span id="currency-name">USD:RUB</span></h3>
-        <h2 class="chart number-chart">--.--</h2>
-      <div class="chart-style">
-        <canvas id="currencyChart"></canvas>
-      </div>
-    </section>
-    <p class="update-info">
-        Обновлено: <span id="update-time">--:-- </span> | Следующее обновление: <span id="next-time">--:--</span>
-    </p>
-
-    <!-- Секция Таблица -->
-    <h4 class="table-text">Текущие курсы валют</h4>
-    <section class="section-table"> 
-
-        <div class="table-container">
-            <table id="rate-table">
-                <tr style="background-color: #F8FAFC;">
-                    <th>Валюта</th>
-                    <th>Описание</th>
-                    <th>Курс</th>
-                    <th>Дата обновления</th>
-                </tr>
-                <tr>
-                    <td>USD:RUB</td>
-                    <td>USD:RUB</td>
-                    <td>USD:RUB</td>
-                    <td>USD:RUB</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    </main>
+    </form> -->
 
     <footer class="footer">
         <p>© 2025 SteamCurrency (Не настоящий сайт!)</p>

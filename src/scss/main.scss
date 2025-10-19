@@ -2,14 +2,26 @@
 @use 'mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    font-size: 16px;
+}
+
+/* Вся страница */
 body {
     background-color: $bg-light;
     margin: 20px;
     padding: 0px;
     margin: auto;
     font-family: 'Inter', serif;
+    color: black;
 }
 
+* {
+    box-sizing: content-box;
+}
+
+
+/* Линия */
 hr {
     border: none;
     border-top: $hr-border-top;
@@ -17,4 +29,119 @@ hr {
 }
 
 
+/* Контейнеры */
+.section-buttons {
+    display: flex;
+    margin-top: 25px;
+    padding: 0;
+    gap: 15px;
 
+    .btn-rate {
+        background-color: #E7EDF3;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        font-family: 'Inter', serif;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #D0DBE7;
+            transition: 0.2s ease;
+        }
+    }
+
+    .btn-rate.active {
+    background-color: #1978E5;
+    color: white;
+    transition: 0.2 ease;
+}
+}
+
+.section-chart {
+    display: block;
+    max-height: 500px;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: $bg-light;
+    border: 2px solid #E7EDF3;
+    border-radius: 20px;
+
+    .text-chart {
+        padding-left: 17px;
+        font-family: 'Inter', serif;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .number-chart {
+        padding-left: 17px;
+        margin-top: -5px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+}
+
+.chart-style {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 950px;
+}
+
+
+/* Стили для текста */
+.update-info {
+    display: block;
+    margin-top: 35px;
+    color: #4E7097;
+    font-size: 14px;
+}
+
+/* Секция с таблицей */
+.table-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+table {
+    border: 1px solid #D0DBE7;
+    border-radius: 14px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+th, td {
+    padding: 20px 25px;
+    text-align: left;
+    font-size: 14px;
+}
+
+tr {
+    border-bottom: 1px solid #D0DBE7;
+}
+
+tr:hover {
+    background-color: #E7EDF3;
+    transition: 0.2 ease;
+}
+
+tr:active {
+    background-color: #1978E5;
+    color: white;
+    transition: 0.2 ease;
+}
+
+th {
+    font-weight: $logo-text-weight;
+}
+
+td {
+    color: #4E7097;
+    cursor: pointer;
+}
+
+/* Адаптивная версия! */
