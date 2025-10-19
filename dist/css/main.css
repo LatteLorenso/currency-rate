@@ -115,6 +115,149 @@
   fill: #4E7097;
 }
 
+footer {
+  font-size: 1rem;
+  text-align: center;
+  color: #4E7097;
+  margin: 70px 0 50px 0;
+}
+footer a:link {
+  color: #0077ff;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+footer a:visited {
+  color: black;
+  text-decoration: none;
+}
+footer a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* 2 DevPage 2 */
+.main2 {
+  font-family: "Inter", serif;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  white-space: wrap;
+  padding: 10px 40px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.main2 .main__title2 {
+  font-size: 12px;
+  text-align: left;
+  margin-right: 15px;
+}
+.main2 .podtext {
+  font-size: 17px;
+  text-align: left;
+  line-height: 1.5;
+}
+.main2 .step1 {
+  margin-top: 30px;
+  font-size: 1.125rem;
+}
+.main2 .podtext2 {
+  font-size: 0.875rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Блок кнопок */
+.btn-block {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.btn-block h3 {
+  font-size: 18px;
+}
+.btn-block .btn-tariff {
+  background-color: #E7EDF3;
+  color: black;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", serif;
+  cursor: pointer;
+}
+.btn-block .btn-tariff:hover {
+  background-color: #D0DBE7;
+  transition: 0.2s ease;
+}
+.btn-block .btn-tariff.active {
+  background-color: #1978E5;
+  color: white;
+  transition: 0.2 ease;
+}
+
+/* Блок Email-Submit */
+.block-submit {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.block-submit h3 {
+  font-size: 1.125rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  display: inline-block;
+  position: relative;
+  margin: 10px 15px 50px 15px;
+  text-align: center;
+  font-size: 17px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.input-wrapper i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4E7097;
+  font-weight: 1000;
+}
+.input-wrapper .input-email {
+  padding: 20px 720px;
+  background-color: #E7EDF3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", serif;
+  padding-left: 45px;
+}
+.input-wrapper .input-email::placeholder {
+  color: #4E7097;
+  font-size: 16px;
+}
+.input-wrapper .btn-submit {
+  margin-top: 10px;
+  background-color: #A0ABC3;
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  font-family: "Inter", serif;
+  cursor: pointer;
+}
+
+html {
+  font-size: 16px;
+}
+
 /* Вся страница */
 body {
   background-color: #F8FAFC;
@@ -122,6 +265,7 @@ body {
   padding: 0px;
   margin: auto;
   font-family: "Inter", serif;
+  color: black;
 }
 
 * {
@@ -144,8 +288,7 @@ hr {
 }
 .section-buttons .btn-rate {
   background-color: #E7EDF3;
-  width: 70px;
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 20px;
   font-family: "Inter", serif;
@@ -201,7 +344,8 @@ hr {
 
 /* Секция с таблицей */
 .table-text {
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-size: 22px;
 }
 
@@ -243,5 +387,7 @@ td {
   color: #4E7097;
   cursor: pointer;
 }
+
+/* Адаптивная версия! */
 
 /*# sourceMappingURL=main.css.map */

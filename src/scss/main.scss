@@ -2,6 +2,10 @@
 @use 'mixins' as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    font-size: 16px;
+}
+
 /* Вся страница */
 body {
     background-color: $bg-light;
@@ -9,7 +13,7 @@ body {
     padding: 0px;
     margin: auto;
     font-family: 'Inter', serif;
-    
+    color: black;
 }
 
 * {
@@ -34,8 +38,7 @@ hr {
 
     .btn-rate {
         background-color: #E7EDF3;
-        width: 70px;
-        padding: 10px;
+        padding: 10px 20px;
         border: none;
         border-radius: 20px;
         font-family: 'Inter', serif;
@@ -97,12 +100,9 @@ hr {
 
 /* Секция с таблицей */
 .table-text {
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 22px;
-}
-
-.section-table {
-    
 }
 
 table {
@@ -143,3 +143,5 @@ td {
     color: #4E7097;
     cursor: pointer;
 }
+
+/* Адаптивная версия! */
