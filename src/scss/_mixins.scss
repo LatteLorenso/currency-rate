@@ -266,13 +266,13 @@ footer {
             background-color: #D0DBE7;
             transition: 0.2s ease;
         }
-    }
 
-    .btn-tariff.active {
-    background-color: #1978E5;
-    color: white;
-    transition: 0.2 ease;
-}
+        &.active {
+            background-color: #1978E5;
+            color: white;
+            transition: 0.2s ease;
+        }
+    }
 }
 
 /* Блок Email-Submit */
@@ -317,7 +317,7 @@ footer {
 
     &::placeholder {
         color: #4E7097;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 }
@@ -331,5 +331,12 @@ footer {
     border-radius: 12px;
     font-family: 'Inter', serif;
     cursor: not-allowed;
+
+    &.active {
+        background-color: #07883B;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
 }
 }
