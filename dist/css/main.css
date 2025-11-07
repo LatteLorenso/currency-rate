@@ -257,6 +257,21 @@ footer a:hover {
   transition: 0.2s ease;
 }
 
+.btn-orig-site {
+  display: inline-block;
+  width: 25%;
+  padding: 10px;
+  text-align: center;
+  background-color: #E7EDF3;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.btn-orig-site :visited {
+  color: black;
+}
+
 html {
   font-size: 16px;
 }
