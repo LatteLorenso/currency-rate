@@ -14,12 +14,12 @@
   font-size: 18px;
   font-weight: 700;
   text-align: left;
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 .header .nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
   text-align: right;
   font-size: 14px;
   font-weight: 400;
@@ -39,13 +39,13 @@
 }
 .header .button-circle {
   text-align: center;
-  line-height: 50px;
   background: #EAEDF1;
-  width: 40px;
+  width: 30px;
   height: 40px;
   border: none;
-  border-radius: 50px;
+  border-radius: 100%;
   cursor: pointer;
+  transition: background-color 0.2 ease;
 }
 .header .button-circle .themeToggle {
   width: 20px;
@@ -53,10 +53,10 @@
   stroke: black;
   stroke-width: 1.7;
   fill: none;
+  transition: stroke 0.2s ease;
 }
-.header .button-circle .themeToggle:hover {
+.button-circle:hover .header .button-circle .themeToggle {
   stroke: #0077ff;
-  transition: 0.1s ease;
 }
 
 .main {
@@ -308,6 +308,7 @@ body {
 
 /* Линия */
 hr {
+  margin-top: -5px;
   border: none;
   border-top: 1px solid #d8d8d8;
   width: 100%;
