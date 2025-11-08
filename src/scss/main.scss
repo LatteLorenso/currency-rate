@@ -9,7 +9,7 @@ html {
 /* Вся страница */
 body {
     background-color: $bg-light;
-    margin: 20px;
+    // margin: 1.2000rem;
     padding: 0px;
     margin: auto;
     font-family: 'Inter', serif;
@@ -32,15 +32,15 @@ hr {
 /* Контейнеры */
 .section-buttons {
     display: flex;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     padding: 0;
-    gap: 15px;
+    gap: 0.9375rem;
 
     .btn-rate {
         background-color: #E7EDF3;
-        padding: 10px 20px;
+        padding: 0.6250rem 1.2500rem;
         border: none;
-        border-radius: 20px;
+        border-radius: 1.2500rem;
         font-family: 'Inter', serif;
         font-weight: 500;
         cursor: pointer;
@@ -61,23 +61,23 @@ hr {
 .section-chart {
     display: block;
     max-height: 500px;
-    margin-top: 40px;
-    padding: 10px;
+    margin-top: 2.5rem;
+    padding: 0.6250rem;
     background-color: $bg-light;
     border: 2px solid #E7EDF3;
-    border-radius: 20px;
+    border-radius: 1.2500rem;
 
     .text-chart {
-        padding-left: 17px;
+        padding-left: 1.0625rem;
         font-family: 'Inter', serif;
         font-size: 1rem;
         font-weight: 500;
     }
 
     .number-chart {
-        padding-left: 17px;
-        margin-top: -5px;
-        font-size: 32px;
+        padding-left: 1.0625rem;
+        margin-top: -0.3125rem;
+        font-size: 2rem;
         font-weight: 700;
     }
 }
@@ -93,21 +93,21 @@ hr {
 /* Стили для текста */
 .update-info {
     display: block;
-    margin-top: 35px;
+    margin-top: 2.1875rem;
     color: #4E7097;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 /* Секция с таблицей */
 .table-text {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 22px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.375rem;
 }
 
 table {
     border: 1px solid #D0DBE7;
-    border-radius: 14px;
+    border-radius: 0.875rem;
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
@@ -115,9 +115,9 @@ table {
 }
 
 th, td {
-    padding: 20px 25px;
+    padding: 1.25rem 1.5625rem;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 tr {
