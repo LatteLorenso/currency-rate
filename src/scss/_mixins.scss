@@ -244,7 +244,7 @@ footer {
 .btn-block {
     display: flex;
     text-align: center;
-    gap: 10px;
+    gap: 0.625rem;
     flex-direction: column;
     margin: 0 auto;
 
@@ -255,10 +255,10 @@ footer {
     .btn-tariff {
         background-color: #E7EDF3;
         color: black;
-        padding: 15px 20px;
-        font-size: 16px;
+        padding: 0.9375rem 1.25rem;
+        font-size: 1rem;
         border: none;
-        border-radius: 12px;
+        border-radius: 0.75rem;
         font-family: 'Inter', serif;
         cursor: pointer;
 
@@ -279,7 +279,7 @@ footer {
 .block-submit {
     display: flex;
     text-align: center;
-    gap: 10px;
+    gap: 0.625rem;
     flex-direction: column;
 
     h3 {
@@ -292,7 +292,7 @@ footer {
     position: relative;
     display: flex;
     text-align: center;
-    gap: 10px;
+    gap: 0.625rem;
     flex-direction: column;
 
     & i {
@@ -306,14 +306,14 @@ footer {
     }
 
     .input-email {
-    padding: 15px 21px;
+    padding: 0.9375rem 1.3125rem;
     background-color: #E7EDF3;
     color: black;
     border: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     font-family: 'Inter', serif;
     font-size: 1.0625rem;
-    padding-left: 45px;
+    padding-left: 2.8125em;
 
     &::placeholder {
         color: #4E7097;
@@ -325,10 +325,10 @@ footer {
     .btn-submit {
     background-color: #A0ABC3;
     color: white;
-    padding: 15px 21px;
+    padding: 0.9375rem 1.3125em;
     font-size: 1rem;
     border: none;
-    border-radius: 12px;
+    border-radius: 0.75em;
     font-family: 'Inter', serif;
     cursor: not-allowed;
 
@@ -344,10 +344,10 @@ footer {
 .btn-orig-site {
     display: inline-block;
     width: 25%;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
     background-color: #E7EDF3;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     text-decoration: none;
     color: black;
     font-size: $h2-normal;
@@ -355,4 +355,23 @@ footer {
     :visited {
         color: black;
     }
+}
+
+.api-benefits {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+
+    .container-svg {
+        background-color: #E7EDF3;
+        padding: 0.6250rem;
+        border-radius: 0.5000rem;
+    }
+
+    .api-item {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 15px;
+}
 }

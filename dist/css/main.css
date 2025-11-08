@@ -171,7 +171,7 @@ footer a:hover {
 .btn-block {
   display: flex;
   text-align: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-direction: column;
   margin: 0 auto;
 }
@@ -181,10 +181,10 @@ footer a:hover {
 .btn-block .btn-tariff {
   background-color: #E7EDF3;
   color: black;
-  padding: 15px 20px;
-  font-size: 16px;
+  padding: 0.9375rem 1.25rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   font-family: "Inter", serif;
   cursor: pointer;
 }
@@ -202,7 +202,7 @@ footer a:hover {
 .block-submit {
   display: flex;
   text-align: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-direction: column;
 }
 .block-submit h3 {
@@ -214,7 +214,7 @@ footer a:hover {
   position: relative;
   display: flex;
   text-align: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-direction: column;
 }
 .block-submit .input-wrapper i {
@@ -227,14 +227,14 @@ footer a:hover {
   font-weight: 1000;
 }
 .block-submit .input-wrapper .input-email {
-  padding: 15px 21px;
+  padding: 0.9375rem 1.3125rem;
   background-color: #E7EDF3;
   color: black;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75rem;
   font-family: "Inter", serif;
   font-size: 1.0625rem;
-  padding-left: 45px;
+  padding-left: 2.8125em;
 }
 .block-submit .input-wrapper .input-email::placeholder {
   color: #4E7097;
@@ -243,10 +243,10 @@ footer a:hover {
 .block-submit .btn-submit {
   background-color: #A0ABC3;
   color: white;
-  padding: 15px 21px;
+  padding: 0.9375rem 1.3125em;
   font-size: 1rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.75em;
   font-family: "Inter", serif;
   cursor: not-allowed;
 }
@@ -260,16 +260,33 @@ footer a:hover {
 .btn-orig-site {
   display: inline-block;
   width: 25%;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
   background-color: #E7EDF3;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   text-decoration: none;
   color: black;
   font-size: 14px;
 }
 .btn-orig-site :visited {
   color: black;
+}
+
+.api-benefits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+.api-benefits .container-svg {
+  background-color: #E7EDF3;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+}
+.api-benefits .api-item {
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 15px;
 }
 
 html {
