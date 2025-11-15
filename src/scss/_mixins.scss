@@ -159,14 +159,14 @@ footer {
     }
 
     a:hover {
-        color: black;
+        color: #0077ff;
         text-decoration:underline;
     }
 }
 
 
 
-/* 2 DevPage 2 */
+/* 2 developers.html 2 */
 .main2 {
     font-family: 'Inter', serif;
     display: block;
@@ -374,4 +374,17 @@ footer {
     font-size: 1rem;
     margin-left: 15px;
 }
+}
+
+
+/* 3 check-rate.html 3 */
+.main__title3 p {
+    font-weight: 400; 
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.main__title3 .pic-balance {
+    border-radius: 10px;
+    margin-top: 15px;
 }

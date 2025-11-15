@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Rate</title>
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="/dist/images/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__title">
+        <a href="homepage.html">SteamCurrency</a>
+    </div>
+    <nav class="nav">
+        <a href="developers.html">Разработчикам</a>
+        <a href="check-rate.html">Проверить курс</a>
+        <a href="#Support">Поддержать проект</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#Calculator">Калькулятор</a>
+        <button type="button" class="button-circle" id="themeToggle">
+        <svg class="themeToggle" id="#nmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+        </button>
+    </nav>
+</header>
+
+<hr>
+    
+<!-- Основная секция -->
+<main class="main">
+    <div class="main__title3">
+        <h1 style="font-size: 32px;">Как проверить, что курс указанный на сайте <br>соответствует курсу Steam?</h1>
+        <p>Заходим в раздел "Об аккаунте" (Account details), далее "История покупок" (View purchase history).</p>
+        <img class="pic-balance" src="https://steam-currency.ru/storage/images/balance/balance_1.webp" width="960px" height="auto" alt>
+        <p>На балансе на данный момент имеется сумма в размере 219,31 руб.</p>
+        <img class="pic-balance" src="https://steam-currency.ru/storage/images/balance/balance_2.webp" width="960px" height="auto" alt>
+        <p>Далее пополняете счет вашего аккаунта любым удобным способом. Для примера, я пополню счет на 100р. После зачисления средств (Следует понимать, что все зачисления на аккаунт производятся в долларах), история покупок выглядит следующим образом:</p>
+        <img class="pic-balance" src="https://steam-currency.ru/storage/images/balance/balance_3.webp" width="960px" height="auto" alt>
+        <p>Теперь баланс моего аккаунта составляет 320,62р. Вычтем из него значение, которое было до пополнения: 320,62 <br> - 219,31 = 101,31. 
+            Поскольку зачисления производятся в долларах, мы также видим в истории, что пополнение было на сумму $1.09 USD. 
+            Получается, что $1.09 USD = 101,31. Отсюда следует, что 1$ = 101,31 / 1.09 = 92.94.</p>
+
+    <footer class="footer">
+        <p>© 2025 SteamCurrency (Не настоящий сайт!)</p>
+        <p>Ссылка на оригинальный сайт: <a href="https://steam-currency.ru/">Курсы валют Steam / SteamCurrency</a></p>
+        <!-- Commit -->
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="js/app.js" type="module"></script> -->
+<script src="js/devpagescript.js" type="module"></script>
+<!-- <script src="js/nmode.js" type="module"></script> -->
+</body>
+</html>
