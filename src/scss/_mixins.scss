@@ -388,3 +388,67 @@ footer {
     border-radius: 10px;
     margin-top: 15px;
 }
+
+/* 3 donate.html 4 */
+.main__title4 h2 {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.main__title4 span {
+    display: inline-block;
+    margin-top: 15px; 
+    background-color: #E7EDF3; 
+    border-radius: 24px; 
+    font-size: 14px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.main__title4 a {
+    color: black;
+    
+    a:visited & {
+        color: black;
+    }
+}
+
+.main__title4 .eth-input {
+    display: flex;
+    max-width: 480px;
+    flex-wrap: wrap;
+    justify-items: end;
+}
+
+.eth-label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.donate_input {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    color: #101418;
+    outline: none;
+    background-color: #FAF9FB;
+    border: 1px solid #D4DBE2;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Inter', serif;
+
+    .donate_input_icon {
+        display: flex;
+        background-color: #FAF9FB;
+        border: 1px solid #D4DBE2;
+        border-radius: 12px;
+        justify-content: center;
+        padding-right: 15px;
+    }
+}
+
+.disabled_copy_notification {
+    display: none;
+}

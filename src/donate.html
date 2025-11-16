@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Rate</title>
+    <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="/dist/images/favicon-32x32.png" rel="icon" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<header class="header">
+    <div class="header__title">
+        <a href="homepage.html">SteamCurrency</a>
+    </div>
+    <nav class="nav">
+        <a href="developers.html">Разработчикам</a>
+        <a href="check-rate.html">Проверить курс</a>
+        <a href="donate.html">Поддержать проект</a>
+        <a href="#FAQ">FAQ</a>
+        <a href="#Calculator">Калькулятор</a>
+        <button type="button" class="button-circle" id="themeToggle">
+        <svg class="themeToggle" id="#nmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+        </button>
+    </nav>
+</header>
+
+<hr>
+    
+<!-- Основная секция -->
+<main class="main">
+    <div class="main__title4">
+        <h1 style="font-size: 32px;">Поддержать проект</h1>
+        <p>Только Ваша поддержка помогает нам развивать и улучшать SteamCurrency. Мы будем благодарны любой сумме. <br>
+            Всех обняли. Выберите удобный способ пожертвования ниже:</p>
+        <h2><b>Cloudtips</b></h1>
+        <p>Электронные чаевые картой онлайн.</p>
+        <a href="https://steam-currency.ru/donate">
+            <span>Поддержать ребят с настоящего сайта</span>
+        </a>
+        <h2><b>ETH</b></h1>
+        <p>Этот адрес может принимать только ETH. Чтобы предотвратить потерю актива, НЕ отправляйте на этот адрес <br>
+            другую валюту.</p>
+        <div class="eth-input">
+            <label class="eth-label">
+                <div style="display: flex; width: auto; flex: 1; justify-items: stretch; border-radius: 12px;">
+                    <input disabled class="donate_input" value="0xFca9EC1aBf16b0F15245e7F6f5D434caB9E90311">
+                    <div class="donate_input_icon" data-icon="Copy" data-size="24px" data-weight="regular" data-copy="0xFca9EC1aBf16b0F15245e7F6f5D434caB9E90311" bis_skin_checked="1">
+                        <div class="disabled_copy_notification" bis_skin_checked="1">Copied!</div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+    <footer class="footer">
+        <p>© 2025 SteamCurrency (Не настоящий сайт!)</p>
+        <p>Ссылка на оригинальный сайт: <a href="https://steam-currency.ru/">Курсы валют Steam / SteamCurrency</a></p>
+        <!-- Commit -->
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="js/app.js" type="module"></script> -->
+<script src="js/devpagescript.js" type="module"></script>
+<!-- <script src="js/nmode.js" type="module"></script> -->
+</body>
+</html>
