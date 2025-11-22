@@ -36,6 +36,7 @@
         <h1 style="font-size: 32px;">Поддержать проект</h1>
         <p>Только Ваша поддержка помогает нам развивать и улучшать SteamCurrency. Мы будем благодарны любой сумме. <br>
             Всех обняли. Выберите удобный способ пожертвования ниже:</p>
+
         <h2><b>Cloudtips</b></h1>
         <p>Электронные чаевые картой онлайн.</p>
         <a href="https://steam-currency.ru/donate">
@@ -44,19 +45,21 @@
         <h2><b>ETH</b></h1>
         <p>Этот адрес может принимать только ETH. Чтобы предотвратить потерю актива, НЕ отправляйте на этот адрес <br>
             другую валюту.</p>
-        <div class="eth-input">
-            <label class="eth-label">
-                <div style="display: flex; width: auto; flex: 1; justify-items: stretch; border-radius: 12px;">
-                    <input disabled class="donate_input" value="0xFca9EC1aBf16b0F15245e7F6f5D434caB9E90311">
-                    <div class="donate_input_icon" data-icon="Copy" data-size="24px" data-weight="regular" data-copy="0xFca9EC1aBf16b0F15245e7F6f5D434caB9E90311" bis_skin_checked="1">
-                        <div class="disabled_copy_notification" bis_skin_checked="1">Copied!</div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                                <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </label>
+        <div class="container-input">
+            <div class="container-icon">
+                <i class="fa-regular fa-clone" id="copy-icon-eth"></i>
+            </div>
+            <input disabled class="eth-input" id="eth-value" type="text" value="0xFca9EC1aBf16b0F15245e7F6f5D434caB9E90311">
+        </div>
+
+        <h2><b>USDT (TRC20)</b></h1>
+        <p>Этот адрес может принимать только USDT(TRC20). Чтобы предотвратить потерю актива, НЕ отправляйте на этот <br>
+            адрес другую валюту.</p>
+        <div class="container-input">
+            <div class="container-icon">
+                <i class="fa-regular fa-clone" id="copy-icon-USDT"></i>
+            </div>
+            <input disabled class="eth-input" id="USDT-value" type="text" value="TPXmguGaEs3SceiH6TYwfFLJT8oN8gR8U1">
         </div>
 
     <footer class="footer">
@@ -65,9 +68,9 @@
         <!-- Commit -->
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <!-- <script src="js/app.js" type="module"></script> -->
-<script src="js/devpagescript.js" type="module"></script>
+<script src="js/copy-icon.js" type="module"></script>
 <!-- <script src="js/nmode.js" type="module"></script> -->
 </body>
 </html>
