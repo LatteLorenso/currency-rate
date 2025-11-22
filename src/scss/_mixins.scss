@@ -173,25 +173,25 @@ footer {
     align-items: center;
     justify-content: space-between;
     white-space: wrap;
-    padding: 10px 40px;
+    padding: 0.6250rem 2.5rem;
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
 
     .main__title2 {
-        font-size: 12px;
+        font-size: 0.7500rem;
         text-align: left;
-        margin-right: 15px;
+        margin-right: 0.9375rem;
     }
 
     .podtext {
-        font-size: 17px;
+        font-size: 1.0625rem;
         text-align: left;
         line-height: 1.5;
     }
 
     .step1 {
-        margin-top: 30px;
+        margin-top: 1.875rem;
         font-size: 1.125rem;
     }
 
@@ -361,7 +361,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 
     .container-svg {
         background-color: #E7EDF3;
@@ -372,7 +372,7 @@ footer {
     .api-item {
     display: inline-block;
     font-size: 1rem;
-    margin-left: 15px;
+    margin-left: 0.9375rem;
 }
 }
 
@@ -380,19 +380,20 @@ footer {
 /* 3 check-rate.html 3 */
 .main__title3 p {
     font-weight: 400; 
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
 .main__title3 .pic-balance {
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
 }
 
 /* 4 donate.html 4 */
-.main__title4 h2 {
-    font-size: 18px;
-    margin-top: 25px;
+.main__title4 h3 {
+    font-size: 1.125rem;
+    margin-top: 1.875rem;
+    font-weight: 800;
 }
 
 .main__title4 a {
@@ -405,11 +406,11 @@ footer {
 
 .main__title4 span {
     display: inline-block;
-    margin-top: 15px; 
+    margin-top: 0.9375rem; 
     background-color: #E7EDF3; 
     border-radius: 24px; 
-    font-size: 14px;
-    padding: 15px;
+    font-size: 0.8750rem;
+    padding: 0.9375rem;
     cursor: pointer;
 }
 
@@ -417,11 +418,11 @@ footer {
     display: flex;
     flex-flow: row nowrap;
     flex: 1 1 100%;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
 }
 
 .container-input .eth-input {
-    padding: 20px 15px;
+    padding: 1.2500rem 0.9375rem;
     width: min(100%, 420px);
     font-family: 'Inter', system-ui;
     font-size: 1rem;
@@ -444,8 +445,3 @@ footer {
         font-size: 1.250rem;
     }
 }
-
-// .container-input .svg-icon {
-//     position: absolute;
-//     top: 50px;
-// }
