@@ -445,3 +445,37 @@ footer {
         font-size: 1.250rem;
     }
 }
+
+/* 5 FAQ.html 5 */
+.container-faq {
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    & .faq {
+        flex-flow: column nowrap;
+        background-color: white;
+        color: black;
+        width: 95%;
+        align-items: center;
+        // height: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0.5rem 0.9375rem;
+        border: 1px solid #dbe0e6;
+        border-radius: 10px;
+    }
+
+    & .container-down {
+        position: relative;
+
+        & i {
+            position: absolute;
+            bottom: 15px;
+            left: 890px;
+            font-size: 17px;
+            color: #424242;
+        }
+    }
+}

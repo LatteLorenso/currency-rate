@@ -356,6 +356,36 @@ a:visited .main__title4 a {
   font-size: 1.25rem;
 }
 
+/* 5 FAQ.html 5 */
+.container-faq {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.container-faq .faq {
+  flex-flow: column nowrap;
+  background-color: white;
+  color: black;
+  width: 95%;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0.5rem 0.9375rem;
+  border: 1px solid #dbe0e6;
+  border-radius: 10px;
+}
+.container-faq .container-down {
+  position: relative;
+}
+.container-faq .container-down i {
+  position: absolute;
+  bottom: 15px;
+  left: 890px;
+  font-size: 17px;
+  color: #424242;
+}
+
 html {
   font-size: 16px;
 }
